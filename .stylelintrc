@@ -1,0 +1,12 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
+  "syntax": "scss",
+  "rules": {
+      "selector-type-case": null,
+      "selector-type-no-unknown": [true, { ignore: ["custom-elements", "default-namespace"] }]
+  }
+}

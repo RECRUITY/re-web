@@ -1,0 +1,28 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "lodash",
+        "transform-decorators-legacy",
+        "babel-plugin-styled-components"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "lodash",
+        "transform-decorators-legacy"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "lodash",
+        "transform-decorators-legacy"
+      ]
+    }
+  }
+}
