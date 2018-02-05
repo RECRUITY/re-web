@@ -1,7 +1,6 @@
 /* External dependencies */
 const path = require('path');
 const webpack = require('webpack');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: ['babel-polyfill', path.resolve(__dirname, '..', 'src', 'main.jsx')],
@@ -26,6 +25,5 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify("production"),
     }),
-    new BundleAnalyzerPlugin(),
   ],
 };
