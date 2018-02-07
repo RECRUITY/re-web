@@ -3,6 +3,9 @@ import React from 'react';
 
 /* Internal dependencies */
 import Button from '../../elements/Button';
+import {FormDiv, FormAttr, Attr, FormInput} from '../../elements/FormDiv';
+
+
 
 class App extends React.Component {
   constructor() {
@@ -24,11 +27,20 @@ class App extends React.Component {
     return (
       <div>
         <Button
-          bgColor={this.state.bgColor}
+          //bgColor={this.state.bgColor}
           onClick={this.handleClick}
         >
-          나의 첫 버튼
+          Sign Up
         </Button>
+        <FormDiv>
+          <FormAttr>
+            <Attr>Name</Attr>
+          </FormAttr>
+          <FormInput placeholder="Narae Keum" type="text" />
+          
+          
+          
+        </FormDiv>
       </div>
     );
   }
