@@ -1,0 +1,6 @@
+{
+  "name": "InputLabel",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./InputLabel.styled.js"
+}
