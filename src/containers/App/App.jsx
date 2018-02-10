@@ -16,9 +16,6 @@ const App = () => (
     <InputLabel>
       e-mail
     </InputLabel>
-    <InputLabel>
-      PW
-    </InputLabel>
   </div>
 );
 
