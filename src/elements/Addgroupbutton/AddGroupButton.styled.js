@@ -2,8 +2,6 @@
 import styled from 'styled-components';
 
 const AddGroupButton = styled.button`    
-    margin-top:50px;
-
     width: 345px;
     height: 268px;
     border-radius: 5px;

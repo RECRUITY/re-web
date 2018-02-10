@@ -1,5 +1,5 @@
 /* External dependencies */
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const Input = styled.input`
     border: 0px;

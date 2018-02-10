@@ -4,6 +4,7 @@ import React from 'react';
 /* Internal dependencies */
 import Input from '../../elements/Input';
 import AddGroupButton from '../../elements/AddGroupButton';
+import Icon from '../../elements/Icon';
 
 class App extends React.Component {
   constructor() {
@@ -18,8 +19,9 @@ class App extends React.Component {
       <div>
         <Input placeholder="Input your name" type="text" />
         <AddGroupButton>
-          <img src='../../image/plus.png' />
+          add font
         </AddGroupButton>
+        <Icon></Icon>
       </div>
     );
   }
