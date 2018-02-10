@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 const InputLabel = styled.div`
-  width:  ${props => props.width || 50}px;
+  width: ${props => props.width || 50}px;
   height: ${props => props.height || 40}px;
   background-color: transparent;
   font-size: 15px;

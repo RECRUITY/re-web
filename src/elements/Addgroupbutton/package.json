@@ -1,6 +1,0 @@
-{
-  "name": "AddGroupButton",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./AddGroupButton.styled.js"
-}
