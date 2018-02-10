@@ -17,6 +17,7 @@ injectGlobal`
   }
 
   body {
+    font-family: MalgunGothic;
     margin: 0;
   }
 `;
