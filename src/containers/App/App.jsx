@@ -19,7 +19,8 @@ const App = () => (
     <Input placeholder="input your name" />
     <AddGroupButton>add font</AddGroupButton>
     <Icon>+</Icon>
-    <Word bold size={2}>Sign Up</Word>
+    <Word bold size={20} >Sign Up</Word>
+    <Word size={16} > 가입하기</Word>
   </div>
 );
 

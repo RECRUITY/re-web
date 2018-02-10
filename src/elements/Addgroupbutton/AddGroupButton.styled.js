@@ -9,5 +9,4 @@ const AddGroupButton = styled.button`
     border: solid 1px #e0e4e8;
 `;
 
-
 export default AddGroupButton;
