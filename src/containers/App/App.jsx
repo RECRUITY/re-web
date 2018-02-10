@@ -3,6 +3,7 @@ import React from 'react';
 
 /* Internal dependencies */
 import Button from '../../elements/Button';
+import InputLabel from '../../elements/InputLabel';
 
 const App = () => (
   <div>
@@ -12,6 +13,9 @@ const App = () => (
     <Button primary>
       미리보기
     </Button>
+    <InputLabel>
+      e-mail
+    </InputLabel>
   </div>
 );
 
