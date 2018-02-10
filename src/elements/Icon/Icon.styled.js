@@ -6,6 +6,7 @@ const Icon = styled.div`
     width: 75px;
     height: 75px;
     border-radius : 100%;
-`
+    padding:23px 0 0 0;
+`;
 
 export default Icon;
