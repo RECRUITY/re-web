@@ -3,10 +3,7 @@ import React from 'react';
 
 /* Internal dependencies */
 import Button from '../../elements/Button';
-import Input from '../../elements/Input';
-import AddGroupButton from '../../elements/AddGroupButton';
-import Icon from '../../elements/Icon';
-import Word from '../../elements/Word';
+import InputLabel from '../../elements/InputLabel';
 
 const App = () => (
   <div>
@@ -16,11 +13,9 @@ const App = () => (
     <Button primary>
       미리보기
     </Button>
-    <Input placeholder="input your name" />
-    <AddGroupButton>add font</AddGroupButton>
-    <Icon>+</Icon>
-    <Word bold size={20} >Sign Up</Word>
-    <Word size={16} > 가입하기</Word>
+    <InputLabel>
+      e-mail
+    </InputLabel>
   </div>
 );
 
