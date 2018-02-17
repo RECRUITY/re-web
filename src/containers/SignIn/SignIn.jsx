@@ -26,7 +26,6 @@ class SignIn extends React.Component {
     this.props.signIn({ manager })
       .promise
       .then(() => {
-        console.log('gogo group!!');
         this.props.history.push('/group');
       });
   }
