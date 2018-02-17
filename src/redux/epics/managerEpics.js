@@ -23,9 +23,8 @@ export const signUpEpic = action$ =>
       return apiToObservable(action, managerAPI.signUp, manager);
     });
 
-
 export const signOutEpic = action$ =>
-  action$.ofType(ActionTypes.REQUEST_GET_ME)
+  action$.ofType(ActionTypes.REQUEST_SIGN_OUT)
     .switchMap(action => apiToObservable(action, managerAPI.signOut));
 
 export default combineEpics(
