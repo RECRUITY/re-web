@@ -16,11 +16,6 @@ class SignInForm extends React.Component {
     onSignIn: PropTypes.func.isRequired,
   }
 
-  @autobind
-  handleSubmit(manager) {
-    this.props.onSignIn(manager);
-  }
-
   renderEmailField(props) {
     const { input } = props;
     return (
@@ -46,7 +41,7 @@ class SignInForm extends React.Component {
 
   render() {
     return (
-      <Styled.Form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+      <Styled.Form onSubmit={this.props.handleSubmit(this.props.onSignIn)}>
         <Styled.Title>Recruiting</Styled.Title>
         <Styled.Description>We help you in your recruitment</Styled.Description>
         <Field name="email" component={this.renderEmailField} />

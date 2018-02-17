@@ -18,6 +18,7 @@ export default (state = initState, action) => {
       };
 
     case AT.REQUEST_GET_ME_SUCCESS:
+    case AT.REQUEST_SIGN_IN_SUCCESS:
       return {
         ...state,
         fetching: false,

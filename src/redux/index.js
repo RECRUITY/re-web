@@ -21,7 +21,6 @@ class ReduxService {
       applyMiddleware(
         actionLifeCycle(),
         epicMiddleware,
-        // require('redux-logger').logger,
       ),
     );
   }

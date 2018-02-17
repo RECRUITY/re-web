@@ -16,11 +16,19 @@ const mapDispatchToProps = {
 class SignIn extends React.Component {
   static propTypes = {
     signIn: PropTypes.func.isRequired,
+    history: PropTypes.shape({
+      push: PropTypes.func,
+    }).isRequired,
   }
 
   @autobind
   handleSignIn(manager) {
-    return this.props.signIn({ manager });
+    this.props.signIn({ manager })
+      .promise
+      .then(() => {
+        console.log('gogo group!!');
+        this.props.history.push('/group');
+      });
   }
 
   render() {
