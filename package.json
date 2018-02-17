@@ -27,6 +27,7 @@
     "stylelint-all"
   ],
   "dependencies": {
+    "core-decorators": "^0.20.0",
     "immutable": "^3.8.2",
     "qs": "^6.5.1",
     "react": "^16.2.0",
