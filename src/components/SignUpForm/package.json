@@ -1,0 +1,6 @@
+{
+  "name": "SignUpForm",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SignUpForm.jsx"
+}
