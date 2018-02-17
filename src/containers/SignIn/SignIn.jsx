@@ -1,9 +1,12 @@
 /* External dependencies */
 import React from 'react';
 
+/* Internal dependencies */
+import SignInForm from '../../components/SignInForm';
+
 const SignIn = () => (
   <div>
-    나는 회원가입...!!!!
+    <SignInForm />
   </div>
 );
 

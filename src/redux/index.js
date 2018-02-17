@@ -1,12 +1,20 @@
 /* External Dependencies */
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 /* Internal Dependencies */
 import actionLifeCycle from './middlewares/actionLifeCycle';
 
 class ReduxService {
   constructor() {
-    this.store = createStore(applyMiddleware(actionLifeCycle()));
+    const reducer = combineReducers({
+      form: formReducer,
+    });
+
+    this.store = createStore(
+      reducer,
+      applyMiddleware(actionLifeCycle()),
+    );
   }
 
   getStore() {
