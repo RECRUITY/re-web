@@ -32,6 +32,17 @@ class SignUpForm extends React.Component {
     );
   }
 
+  renderNameField(props) {
+    const { input } = props;
+    return (
+      <Styled.InputField
+        label="name"
+        placeholder="이름을 입력해주세요."
+        onChange={input.onChange}
+      />
+    );
+  }
+
   renderPasswordField(props) {
     const { input } = props;
     return (
@@ -62,6 +73,7 @@ class SignUpForm extends React.Component {
         <Styled.Title>Recruiting</Styled.Title>
         <Styled.Description>We help you in your recruitment</Styled.Description>
         <Field name="email" component={this.renderEmailField} />
+        <Field name="name" component={this.renderNameField} />
         <Field name="password" component={this.renderPasswordField} />
         <Field name="confirmPassword" component={this.renderConfirmPasswordField} />
         <Styled.Button
