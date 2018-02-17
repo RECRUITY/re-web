@@ -10,13 +10,14 @@ const Form = styled.form`
   width: 425px;
   display: flex;
   flex-direction: column;
-  padding: 25px 0;
   align-items: center;
+  padding: 25px 0;
   border: 1px solid ${colors.brownishGrey};
   border-radius: 10px;
 `;
 
 const Title = styled.div`
+  margin-top: 25px;
   font-size: 35px;
   font-weight: bold;
   color: ${colors.brownishGrey};
