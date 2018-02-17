@@ -16,7 +16,15 @@ export const signInEpic = action$ =>
       return apiToObservable(action, managerAPI.signIn, manager);
     });
 
+export const signUpEpic = action$ =>
+  action$.ofType(ActionTypes.REQUEST_SIGN_UP)
+    .switchMap((action) => {
+      const { manager } = action.payload;
+      return apiToObservable(action, managerAPI.signUp, manager);
+    });
+
 export default combineEpics(
   getMeEpic,
   signInEpic,
+  signUpEpic,
 );
