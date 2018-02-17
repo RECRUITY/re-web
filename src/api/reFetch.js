@@ -55,6 +55,15 @@ class ReFetch {
       body: JSON.stringify(body),
     });
   }
+
+  delet(url) {
+    return this.fetch(url, {
+      method: 'DELETE',
+      headers: {
+        ...this.getDefaultHeader(),
+      },
+    });
+  }
 }
 
 const reFetch = new ReFetch();

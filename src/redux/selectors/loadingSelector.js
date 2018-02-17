@@ -6,4 +6,6 @@ const App = createSelector(
   (...args) => args.reduce((prev, cur) => prev || cur, false),
 );
 
-export default App;
+export default {
+  App,
+};
