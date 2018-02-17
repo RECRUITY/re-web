@@ -1,19 +1,25 @@
 /* External Dependencies */
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
+import { createEpicMiddleware } from 'redux-observable';
 
 /* Internal Dependencies */
 import actionLifeCycle from './middlewares/actionLifeCycle';
+import rootEpic from './epics';
 
 class ReduxService {
   constructor() {
     const reducer = combineReducers({
       form: formReducer,
     });
+    const epicMiddleware = createEpicMiddleware(rootEpic);
 
     this.store = createStore(
       reducer,
-      applyMiddleware(actionLifeCycle()),
+      applyMiddleware(
+        actionLifeCycle(),
+        epicMiddleware,
+      ),
     );
   }
 

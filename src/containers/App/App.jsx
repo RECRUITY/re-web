@@ -8,7 +8,7 @@ import SignIn from '../SignIn';
 const App = () => (
   <Router>
     <Switch>
-      <Route path="/sign_in" component={SignIn} />
+      <Route path="/signin" component={SignIn} />
     </Switch>
   </Router>
 );

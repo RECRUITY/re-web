@@ -13,10 +13,12 @@ import Styled from './SignInForm.styled';
 class SignInForm extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
+    onSignIn: PropTypes.func.isRequired,
   }
 
   @autobind
-  handleSubmit() {
+  handleSubmit(manager) {
+    this.props.onSignIn(manager);
   }
 
   renderEmailField(props) {

@@ -36,11 +36,21 @@ class ReFetch {
   }
 
   get(url, query) {
-    return this.fetch(query ? `${url}?${qs.stringify(query)}` : url, {
+    return this.fetch(query ? `${url}?${qs.stringify({ ...query, t: +(new Date()) })}` : url, {
       method: 'GET',
       headers: {
         ...this.getDefaultHeader(),
       },
+    });
+  }
+
+  post(url, body) {
+    return this.fetch(url, {
+      method: 'POST',
+      headers: {
+        ...this.getDefaultHeader(),
+      },
+      body: JSON.stringify(body),
     });
   }
 }
