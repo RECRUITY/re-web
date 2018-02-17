@@ -27,9 +27,20 @@
     "stylelint-all"
   ],
   "dependencies": {
+    "core-decorators": "^0.20.0",
+    "immutable": "^3.8.2",
+    "qs": "^6.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "styled-components": "^2.4.0"
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.3",
+    "redux-observable": "^0.18.0",
+    "rxjs": "^5.5.6",
+    "styled-components": "^2.4.0",
+    "uuid": "^3.2.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

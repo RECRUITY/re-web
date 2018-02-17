@@ -1,22 +1,16 @@
 /* External dependencies */
 import React from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 /* Internal dependencies */
-import Button from '../../elements/Button';
-import InputLabel from '../../elements/InputLabel';
+import SignIn from '../SignIn';
 
 const App = () => (
-  <div>
-    <Button>
-      내보내기
-    </Button>
-    <Button primary>
-      미리보기
-    </Button>
-    <InputLabel>
-      e-mail
-    </InputLabel>
-  </div>
+  <Router>
+    <Switch>
+      <Route path="/signin" component={SignIn} />
+    </Switch>
+  </Router>
 );
 
 export default App;
