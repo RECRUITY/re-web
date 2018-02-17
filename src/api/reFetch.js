@@ -30,8 +30,10 @@ class ReFetch {
   }
 
   fetch(url, options) {
-    return fetch(this.BASE_URL + url, options)
-      .then(this.checkStatus)
+    return fetch(this.BASE_URL + url, {
+      ...options,
+      credentials: 'include',
+    }).then(this.checkStatus)
       .then(this.parseJSON);
   }
 
