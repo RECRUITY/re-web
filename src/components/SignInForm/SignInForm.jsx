@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 /* Internal dependencies */
 import Styled from './SignInForm.styled';
-import InputField from '../../elements/InputField';
 
 @reduxForm({
   form: 'signIn',
@@ -23,8 +22,9 @@ class SignInForm extends React.Component {
   renderEmailField(props) {
     const { input } = props;
     return (
-      <InputField
+      <Styled.InputField
         label="e-mail"
+        placeholder="e-mail을 입력해주세요."
         onChange={input.onChange}
       />
     );
@@ -33,9 +33,10 @@ class SignInForm extends React.Component {
   renderPasswordField(props) {
     const { input } = props;
     return (
-      <InputField
+      <Styled.InputField
         label="PW"
         type="password"
+        placeholder="비밀번호를 입력해주세요."
         onChange={input.onChange}
       />
     );
@@ -44,11 +45,18 @@ class SignInForm extends React.Component {
   render() {
     return (
       <Styled.Form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+        <Styled.Title>Recruiting</Styled.Title>
+        <Styled.Description>We help you in your recruitment</Styled.Description>
         <Field name="email" component={this.renderEmailField} />
         <Field name="password" component={this.renderPasswordField} />
-        <button type="submit">
-          로그인!!
-        </button>
+        <Styled.Button
+          type="submit"
+          width={120}
+          height={35}
+          radius={17}
+        >
+          로그인
+        </Styled.Button>
       </Styled.Form>
     );
   }

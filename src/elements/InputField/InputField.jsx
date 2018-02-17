@@ -12,6 +12,7 @@ const InputField = ({
   width,
   labelWidth,
   type,
+  placeholder,
   onChange,
 }) => (
   <Styled.Wrapper
@@ -28,6 +29,7 @@ const InputField = ({
       onChange={onChange}
       height={height}
       type={type}
+      placeholder={placeholder}
     />
   </Styled.Wrapper>
 );
@@ -39,6 +41,7 @@ InputField.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   labelWidth: PropTypes.number,
+  placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
 
@@ -48,6 +51,7 @@ InputField.defaultProps = {
   width: 320,
   height: 40,
   labelWidth: 60,
+  placeholder: '',
   type: 'text',
 };
 
