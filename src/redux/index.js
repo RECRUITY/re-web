@@ -5,11 +5,13 @@ import { createEpicMiddleware } from 'redux-observable';
 
 /* Internal Dependencies */
 import actionLifeCycle from './middlewares/actionLifeCycle';
+import reducers from './reducers';
 import rootEpic from './epics';
 
 class ReduxService {
   constructor() {
     const reducer = combineReducers({
+      ...reducers,
       form: formReducer,
     });
     const epicMiddleware = createEpicMiddleware(rootEpic);
@@ -19,6 +21,7 @@ class ReduxService {
       applyMiddleware(
         actionLifeCycle(),
         epicMiddleware,
+        // require('redux-logger').logger,
       ),
     );
   }
