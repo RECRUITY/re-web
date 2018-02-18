@@ -26,7 +26,7 @@ class SignIn extends React.Component {
   render() {
     return (
       <div>
-        <SignUpForm onSignIn={this.handleSignUp} />
+        <SignUpForm onSignUp={this.handleSignUp} />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 import PropTypes from 'prop-types';
 
 /* Internal dependencies */
-import Styled from './SignInForm.styled';
+import Styled from './CreateGroupForm.styled';
 
 @reduxForm({
   form: 'signIn',
@@ -12,27 +12,27 @@ import Styled from './SignInForm.styled';
 class SignInForm extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    onSignIn: PropTypes.func.isRequired,
+    onCreate: PropTypes.func.isRequired,
   }
 
-  renderEmailField(props) {
+  renderNameField(props) {
     const { input } = props;
     return (
       <Styled.InputField
-        label="e-mail"
-        placeholder="e-mail을 입력해주세요."
+        label="name"
+        placeholder="그룹 이름을 입력해주세요."
         onChange={input.onChange}
       />
     );
   }
 
-  renderPasswordField(props) {
+  renderDescriptionField(props) {
     const { input } = props;
     return (
       <Styled.InputField
-        label="PW"
-        type="password"
-        placeholder="비밀번호를 입력해주세요."
+        label="description"
+        type="text"
+        placeholder="그룹 설명을 입력해주세요."
         onChange={input.onChange}
       />
     );
@@ -40,18 +40,18 @@ class SignInForm extends React.Component {
 
   render() {
     return (
-      <Styled.Form onSubmit={this.props.handleSubmit(this.props.onSignIn)}>
-        <Styled.Title>Recruiting</Styled.Title>
+      <Styled.Form onSubmit={this.props.handleSubmit(this.props.onCreate)}>
+        <Styled.Title>New Group</Styled.Title>
         <Styled.Description>We help you in your recruitment</Styled.Description>
-        <Field name="email" component={this.renderEmailField} />
-        <Field name="password" component={this.renderPasswordField} />
+        <Field name="name" component={this.renderNameField} />
+        <Field name="description" component={this.renderDescriptionField} />
         <Styled.Button
           type="submit"
           width={120}
           height={35}
           radius={17}
         >
-          로그인
+          만들기
         </Styled.Button>
       </Styled.Form>
     );
