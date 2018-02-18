@@ -6,9 +6,10 @@ import autobind from 'core-decorators/lib/autobind';
 
 /* Internal dependencies */
 import CreateGroupForm from '../../components/CreateGroupForm';
+import actions from '../../redux/actions';
 
 const mapDispatchToProps = {
-  // signIn: actions.managerActions.signIn,
+  createGroup: actions.groupActions.createGroup,
 };
 
 @connect(null, mapDispatchToProps)
