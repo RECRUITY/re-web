@@ -6,6 +6,6 @@ import selectors from '../redux/selectors';
 
 export default createPreLoader({
   injectToProps: {
-    fetchingManager: selectors.managerSelector.isFetching,
+    fetchingManager: selectors.managerSelectors.isFetching,
   },
 });
