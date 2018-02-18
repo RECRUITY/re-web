@@ -19,6 +19,7 @@ export default (state = initState, action) => {
 
     case AT.REQUEST_GET_ME_SUCCESS:
     case AT.REQUEST_SIGN_IN_SUCCESS:
+    case AT.REQUEST_SIGN_UP_SUCCESS:
       return {
         ...state,
         fetching: false,
@@ -31,6 +32,9 @@ export default (state = initState, action) => {
         fetching: false,
         hasError: true,
       };
+
+    case AT.REQUEST_SIGN_OUT_SUCCESS:
+      return initState;
 
     default:
       return state;

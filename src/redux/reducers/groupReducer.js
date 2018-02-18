@@ -16,6 +16,9 @@ export default (state = initState, action) => {
         group: new Group(action.payload.group),
       };
 
+    case AT.REQUEST_SIGN_OUT_SUCCESS:
+      return initState;
+
     default:
       return state;
   }

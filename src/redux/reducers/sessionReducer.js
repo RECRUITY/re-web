@@ -16,6 +16,9 @@ export default (state = initState, action) => {
         session: new Session(action.payload.session),
       };
 
+    case AT.REQUEST_SIGN_OUT_SUCCESS:
+      return initState;
+
     default:
       return state;
   }
