@@ -29,6 +29,8 @@ class SignIn extends React.Component {
       .then((action) => {
         const groupId = selectn('payload.session.groupId', action);
         this.props.history.push(`/groups/${groupId || 'new'}`);
+      }, () => {
+        // todo: 에러처리
       });
   }
 
