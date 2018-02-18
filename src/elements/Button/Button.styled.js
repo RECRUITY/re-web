@@ -14,6 +14,11 @@ const Button = styled.button`
   font-size: ${props => props.fontSize || 16}px;
   font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: ${colors.purpleBlue};
+  }
 `;
 
 export default Button;
