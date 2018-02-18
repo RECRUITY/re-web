@@ -1,8 +1,10 @@
 /* Internal dependencies */
-import managerSelector from './managerSelector';
-import loadingSelector from './loadingSelector';
+import managerSelectors from './managerSelectors';
+import loadingSelectors from './loadingSelectors';
+import sessionSelectors from './sessionSelectors';
 
 export default {
-  managerSelector,
-  loadingSelector,
+  managerSelectors,
+  loadingSelectors,
+  sessionSelectors,
 };

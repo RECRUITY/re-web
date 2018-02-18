@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import autobind from 'core-decorators/lib/autobind';
+import selectn from 'selectn';
 
 /* Internal dependencies */
 import SignInForm from '../../components/SignInForm';
@@ -25,8 +26,11 @@ class SignIn extends React.Component {
   handleSignIn(manager) {
     this.props.signIn({ manager })
       .promise
-      .then(() => {
-        this.props.history.push('/group');
+      .then((action) => {
+        const groupId = selectn('payload.session.groupId', action);
+        this.props.history.push(`/groups/${groupId || 'new'}`);
+      }, () => {
+        // todo: 에러처리
       });
   }
 

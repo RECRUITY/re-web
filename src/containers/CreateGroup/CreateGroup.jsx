@@ -5,40 +5,39 @@ import PropTypes from 'prop-types';
 import autobind from 'core-decorators/lib/autobind';
 
 /* Internal dependencies */
-import SignUpForm from '../../components/SignUpForm';
+import CreateGroupForm from '../../components/CreateGroupForm';
 import actions from '../../redux/actions';
 
 const mapDispatchToProps = {
-  signUp: actions.managerActions.signUp,
+  createGroup: actions.groupActions.createGroup,
 };
 
 @connect(null, mapDispatchToProps)
-class SignIn extends React.Component {
+class CreateGroup extends React.Component {
   static propTypes = {
-    signUp: PropTypes.func.isRequired,
+    createGroup: PropTypes.func.isRequired,
     history: PropTypes.shape({
-      push: PropTypes.func,
+      replace: PropTypes.func,
     }).isRequired,
   }
 
   @autobind
-  handleSignUp(manager) {
-    this.props.signUp({ manager })
-      .promise
-      .then(() => {
-        this.props.history.push('/groups/new');
+  handleCreate(group) {
+    this.props.createGroup({ group })
+      .promise((action) => {
+        this.props.history.replace(`/groups/${action.group.id}`);
       }, () => {
-        // todo: 에러처리
+        // todo: 에러 처리
       });
   }
 
   render() {
     return (
       <div>
-        <SignUpForm onSignUp={this.handleSignUp} />
+        <CreateGroupForm onCreate={this.handleCreate} />
       </div>
     );
   }
 }
 
-export default SignIn;
+export default CreateGroup;

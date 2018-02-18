@@ -1,3 +1,4 @@
+/* External dependencies */
 import { combineEpics } from 'redux-observable';
 
 /* Internal Dependencies */

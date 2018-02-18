@@ -8,5 +8,9 @@ import 'rxjs/add/operator/switchMap';
 
 /* Internal Dependencies */
 import managerEpics from './managerEpics';
+import groupEpics from './groupEpics';
 
-export default combineEpics(managerEpics);
+export default combineEpics(
+  managerEpics,
+  groupEpics,
+);

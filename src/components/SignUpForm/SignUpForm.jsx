@@ -1,7 +1,6 @@
 /* External dependencies */
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-import autobind from 'core-decorators/lib/autobind';
 import PropTypes from 'prop-types';
 
 /* Internal dependencies */
@@ -13,12 +12,7 @@ import Styled from './SignUpForm.styled';
 class SignUpForm extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    onSignIn: PropTypes.func.isRequired,
-  }
-
-  @autobind
-  handleSubmit(manager) {
-    this.props.onSignIn(manager);
+    onSignUp: PropTypes.func.isRequired,
   }
 
   renderEmailField(props) {
@@ -69,7 +63,7 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <Styled.Form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+      <Styled.Form onSubmit={this.props.handleSubmit(this.props.onSignUp)}>
         <Styled.Title>Recruiting</Styled.Title>
         <Styled.Description>We help you in your recruitment</Styled.Description>
         <Field name="email" component={this.renderEmailField} />
